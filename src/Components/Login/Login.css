@@ -1,0 +1,84 @@
+.Login {
+  text-align: center;
+  background-color: #1a1a1a;
+  top: 50%;
+  z-index: 100;
+  left: 50%;
+  width: 25%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(
+      to left,
+      #6666ff 25%,
+      #3333ff 25%,
+      #ff1a1a 50%,
+      #1aff1a 75%
+    )
+    5;
+    animation-name: example1;
+    animation-duration: 4s;
+    
+}
+
+@keyframes example1 {
+  0%   {top: 0;left: 50%;}
+  25%  {top: 60%;left: 50%;}
+  50% {top: 45%;left: 50%;}
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 5%;
+}
+
+.LoginButton {
+  border: 1px solid #3366ff;
+  background-color: #1a1a1a;
+  border-radius: 25px;
+  text-align: center;
+  padding: 8px;
+  outline: none;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.headerName {
+  margin-top: 25px;
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: cursive;
+}
+.CancelButton {
+  border: 1px solid #3366ff;
+  background-color: #1a1a1a;
+  border-radius: 25px;
+  text-align: center;
+  padding: 8px;
+  outline: none;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.InputField {
+  border: 1px solid #3366ff;
+  border-radius: 50px;
+  background-color: #1a1a1a;
+  font-size: 10px;
+  width: 200px;
+  height: 20px;
+  color: #a6a6a6;
+  padding: 8px;
+  position: static;
+  margin-bottom: 10px;
+}
+.CancelButton:hover {
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #ff1a1a;;
+}
+.LoginButton:hover {
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #66ff99;
+}

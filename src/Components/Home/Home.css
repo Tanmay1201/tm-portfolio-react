@@ -1,0 +1,35 @@
+.Base {
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+}
+
+.TopNav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h2 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.TopNav > .Icon {
+    border: 1px solid white;
+    color: white;
+    width: 30px;
+    height: 25px;
+    border-radius: 45px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.TopNav > .Icon:hover {
+    border: 1px solid greenyellow;
+    color: white;
+    width: 30px;
+    height: 25px;
+    border-radius: 45px;
+    margin-top: 25px;
+    cursor: pointer;
+}

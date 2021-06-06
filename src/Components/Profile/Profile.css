@@ -1,0 +1,36 @@
+.ProfileHead {
+    display: flex;
+    width: 99%;
+    height:  97vh;
+    background: black;
+    border: 1px solid red;
+    overflow-y: hidden;
+    color: white;
+}
+
+.Sections {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid yellow;
+    width: 20%;
+    margin-right: 10px;
+    overflow-y: scroll;
+    font-size: 15px;
+    font-family: cursive;
+    justify-content: center;
+    cursor: pointer;
+}
+.Sections > span {
+    height: 30px;
+    text-align: center;
+    width: 100%;
+}
+.Sections > span:hover {
+    background: burlywood;
+}
+
+.forms {
+    justify-content: center;
+    border: 1px solid blueviolet;
+    width: 80%
+}

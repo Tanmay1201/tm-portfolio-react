@@ -1,0 +1,1 @@
+export const SSN_DATA = 'SSN_DATA'
