@@ -1,1 +1,6 @@
 export const SSN_DATA = 'SSN_DATA'
+export const FETCH_SSN_DATA = 'FETCH_SSN_DATA'
+export const FETCH_SSN_DATA_SUCCESS = 'REQUEST_SSN_DATA'
+export const FETCH_SSN_DATA_ERR = 'ERROR_SSN_DATA'
+export const OPEN_SSN_FORM = 'OPEN_SSN_FORM'
+

@@ -6,14 +6,18 @@ const SocialNet = props => {
 
     const [SSN_Data, setSSN_Data] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/ssn')
-        .then(res=> {
-            console.log(res)
-            setSSN_Data(res.data)
-        })
-        .catch(err => {
-            console.log(err)
-        })
+        if(props.SSN.length == 0)
+        {
+            axios.get('http://localhost:5000/ssn')
+            .then(res=> {
+                console.log(res)
+                setSSN_Data(res.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        }
+            
       }, [])
     return (
         <>
@@ -33,7 +37,7 @@ const SocialNet = props => {
 
 const mapStateToProps = state => {
     return {
-        SSN: state.SSN_Form.data
+        SSN: state.SSN_Data.data
     }
 }
 

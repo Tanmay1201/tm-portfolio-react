@@ -3,7 +3,6 @@
     width: 99%;
     height:  97vh;
     background: black;
-    border: 1px solid red;
     overflow-y: hidden;
     color: white;
 }
@@ -11,26 +10,31 @@
 .Sections {
     display: flex;
     flex-direction: column;
-    border: 3px solid yellow;
     width: 20%;
     margin-right: 10px;
-    overflow-y: scroll;
+    border-right: 1px dashed white;
     font-size: 15px;
     font-family: cursive;
     justify-content: center;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 .Sections > span {
     height: 30px;
     text-align: center;
-    width: 100%;
+    width: 95%;
+    font-size: 20px;
+    padding: 8px;
+    overflow-x: hidden;
 }
 .Sections > span:hover {
     background: burlywood;
+    color: tomato;
+    border-radius: 10px;
 }
 
 .forms {
-    justify-content: center;
-    border: 1px solid blueviolet;
-    width: 80%
+    text-align: center;
+    position: relative;
+    width: 80%;
 }

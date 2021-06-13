@@ -1,6 +1,8 @@
 import Home from './Components/Home/Home'
 import Profile from './Components/Profile/Profile'
 import Login from './Components/Login/Login'
+
+import Forms from './Components/Profile/Forms'
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,17 +16,17 @@ function App() {
     <>
       <Router>
       <Provider store={Store}>
-        <Switch>
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/profile">
+          <Route exact path="/profile">
             <Profile />
           </Route>
           <Route path="/home">
             <Home />
           </Route>
-        </Switch>
+          <Route exact path="/profile/:formId" component={Profile}>
+          </Route>
         </Provider>
       </Router>
     </>

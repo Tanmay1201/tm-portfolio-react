@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import {SSN_Form} from './SSN_FormReducer'
+import {SSN_Reducer} from './SSN_Reducer'
 
 const rootReducer = combineReducers({
-    SSN_Form: SSN_Form
+    SSN_Data: SSN_Reducer
 })
 
 export default rootReducer

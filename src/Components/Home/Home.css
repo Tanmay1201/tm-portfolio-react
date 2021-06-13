@@ -6,7 +6,8 @@
 
 .TopNav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:flex-end;
+    margin-right: 20px;
 }
 
 h2 {
@@ -14,22 +15,49 @@ h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.TopNav > .Icon {
+.TopNav > .IconP {
     border: 1px solid white;
     color: white;
     width: 30px;
     height: 25px;
     border-radius: 45px;
-    margin-top: 25px;
+    margin-top: 15px;
     cursor: pointer;
 }
 
-.TopNav > .Icon:hover {
-    border: 1px solid greenyellow;
-    color: white;
+.TopNav > .IconP:hover {
+    color: #e0e0d1;
     width: 30px;
     height: 25px;
     border-radius: 45px;
-    margin-top: 25px;
+    margin-top: 15px;
     cursor: pointer;
+}   
+.iconP {
+    font-size: 50px;
+    color: white;
+}
+
+.TopNav > .IconD {
+    color: white;
+    width: 15px;
+    height: 5px;
+    border-radius: 45px;
+    padding: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.TopNav > .IconD:hover {
+    color: #e0e0d1;
+    width: 15px;
+    height: 5px;
+    border-radius: 45px;
+    margin-top: 8px;
+    cursor: pointer;
+}   
+.IconD {
+    font-size: 5px;
+    color: white;
 }

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 10%;
+    
 }
 .Generic {
     left: 0;
@@ -17,4 +18,164 @@
 }
 .Generic:hover {
     width: 80px;
+  }
+.FormSSN {
+    background: white;
+    display: flex;
+    width: 60%;
+    padding: 20px;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 60%;
+    z-index: 100;
+    animation-name: example2;
+    animation-duration: 4s;
+    
+}
+
+@keyframes example2 {
+  0%   {top: 0;left: 50%;}
+  25%  {top: 60%;left: 50%;}
+  50% {top: 45%;left: 50%;}
+}
+
+.inputFields {
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    padding-top: 80px;
+    height: 100%;
+    
+    background-color: black;
+}
+
+#URL, #IconName, #BackgroundColor, #submitbutton, #closebutton  {
+    border-radius: 45px;
+    margin: 5px;
+    height: 40px;
+    outline: none;
+    padding: 5px;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#URL:focus, #IconName:focus, #BackgroundColor:focus, #submitbutton:focus,#closebutton:focus{
+    border: 2px solid greenyellow;
+    background-color: black;
+    color: white;
+}
+
+#submitbutton {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#submitbutton:hover {
+    background-color: greenyellow;
+    color: white;
+    
+}
+
+#closebutton {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#closebutton:hover {
+    background-color: greenyellow;
+    color: white;
+    
+}
+
+.table {
+    justify-items: center;
+}
+.table {
+    display: grid;
+}
+.table > table {
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+  }
+.table > td, th {
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+  }
+  
+.col_url {
+    padding: 8px;
+}
+
+.col_logo {
+    padding: 8px;
+}
+
+.col_bgcolor {
+    padding: 8px;
+}
+
+.row_url {
+    padding: 8px;
+
+}
+.row_url:hover {
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+}
+.row_logo {
+    padding: 8px;
+}
+.row_logo:hover {
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+}
+.row_bgcolor {
+    padding: 8px;
+}
+.row_bgcolor:hover {
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+}
+.DelIcon {
+    color: white;    
+}
+.EIcon {
+    color: white;
+}
+.EIcon:hover {
+    color: grey;
+    cursor: pointer;
+}
+.DelIcon:hover {
+    color: grey;
+    cursor: pointer;
+}
+.col_bgcolor, .col_logo, .col_url {
+    background-color: crimson;
+}
+.inputFields > .buttons {
+    display: flex;
+    justify-items: center;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(191, 191, 191, 0.6);
+    z-index: 10;
   }
