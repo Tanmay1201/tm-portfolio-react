@@ -1,9 +1,10 @@
 .ProfileHead {
     display: flex;
-    width: 99%;
-    height:  97vh;
-    background: black;
-    overflow-y: hidden;
+    margin-top: -100vh;
+    width: 100%;
+    height:  100vh;
+    background-color: #2a2a2a;
+    overflow-y: none;
     color: white;
 }
 
@@ -37,4 +38,24 @@
     text-align: center;
     position: relative;
     width: 80%;
+}
+
+#backTohome {
+    top: 0;
+    margin-left: 25px;
+    width: 15%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    position: fixed;
+    padding: 8px;
+}
+#backTohome-icon {
+    padding-right: 10px;
+}
+#backTohome:hover {
+    background: burlywood;
+
+    color: tomato;
+    border-radius: 10px;
 }

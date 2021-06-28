@@ -1,0 +1,121 @@
+.top {
+    width: 100%;
+    height:  100vh;
+    background: black;
+    overflow-y: hidden;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.super {
+    display: flex;
+    justify-content: left;
+    width: 95%;
+}
+.Detail {
+    margin: 30px;
+}
+.aboutB {
+    margin-top: 20%;
+    padding-left: 15px;
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+}
+.aboutB {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.aboutB:hover {
+    background: grey;
+    border-radius: 45px;
+}
+
+.aboutF {
+    margin-top: 20%;
+    padding-right: 15px;
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+}
+.aboutF {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.aboutF:hover {
+    background: grey;
+    border-radius: 45px;
+}
+
+
+.abform {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.inputside {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+   
+}
+
+#aboutselect, #aboutcolor {
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border: 3px solid green;
+    background:  #f2f2f2;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+#aboutcolor {
+    width: 30%;
+}
+
+#abouttxa {
+    height: 500px;
+    width: 95%;
+    border: 3px solid green;    
+    outline: none;
+    background:  #f2f2f2;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.inputside-editopt {
+    display: flex;
+    justify-content: space-between;
+}
+.input-buttons {
+    padding: 10px;
+}
+
+#savebtn {
+    padding: 10px;
+    border: 3px solid indigo;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-right: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    outline: none;
+}
+#resetbtn {
+    padding: 10px;
+    border: 3px solid indigo;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    outline: none;
+}
+#savebtn:hover {
+    border: 3px solid green;
+}
+#resetbtn:hover {
+    border: 3px solid Red;
+}

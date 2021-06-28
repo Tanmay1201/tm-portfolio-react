@@ -1,0 +1,131 @@
+.experience {
+    width: 50%;
+    padding: 10px;
+    height: 90vh;
+    margin-top: -40px;
+    
+    
+}
+#exptag {
+    font-size: 40px;
+}
+#logo{
+    border-radius: 100px;
+    height: 100px;
+    box-shadow: -5px 5px 5px 5px #aaaaaa;
+}
+#companyname {
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#linkedin, #company {
+    cursor: pointer;
+}
+.exp-outerstruct {
+    color: #2a2a2a;
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    font-style: italic;
+    font-family: cursive;
+    background-color:  #d6d6c2;
+    border-radius: 15px;
+    margin-top: 10px;
+    #exp-outerstruct-fronticon, #exp-outerstruct-backicon {
+        margin-top: 40%;
+        cursor: pointer;
+        padding: 20px;
+        border-radius: 45px;
+    }
+    #exp-outerstruct-backicon:hover {
+        background-color: #aaaaaa;
+        color: white;
+    }
+    #exp-outerstruct-fronticon:hover {
+        background-color: #aaaaaa;
+        color: white;
+    }
+}
+.experience-companies {
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    cursor: pointer;
+    .companies-companydetails {
+
+        align-content: center;
+        .webs {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            .socials {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5px;
+                margin-top: 5%;
+
+            }
+        }
+    }
+    .companies-jd {
+        width: 100%;
+        text-align: left;
+        line-height: 15px;
+        font-size: 12px;
+        overflow-y: hidden;
+        padding: 15px;
+        
+    }
+    .companies-jd:hover {
+        overflow-y: scroll;
+    }
+    
+}
+.ball1 {
+    display: flex;
+    justify-content: center;
+}
+.testdiv {
+    background-color: white;
+    border-radius: 15px;
+    padding: 7px;
+    margin-left: 5px;
+}
+
+div * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: none !important;
+      background-color: transparent;
+    }
+    ::-webkit-scrollbar {
+      width: 3px !important;
+      background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+  }
+  .on-scrollbar{
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  
+  .on-scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  
+  .on-scrollbar::-webkit-scrollbar {
+    width: 6px !important;
+    background-color: transparent;
+  }
+  
+  .on-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #acacac;
+  }
+
+  

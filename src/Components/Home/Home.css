@@ -1,13 +1,15 @@
 .Base {
     height: 100vh;
-    background-color: black;
+    background-color: #2a2a2a;
     text-align: center;
+    color: white;
 }
 
 .TopNav {
     display: flex;
     justify-content:flex-end;
     margin-right: 20px;
+    height: 50px;
 }
 
 h2 {
@@ -60,4 +62,71 @@ h2 {
 .IconD {
     font-size: 5px;
     color: white;
+}
+.Data {
+    display: flex;
+    justify-content: space-between;
+}
+.intro {
+    margin-top: 40px;
+    padding-right: 15px;
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+}
+
+.test {
+    max-width: 480px;
+    text-align: left;
+    word-spacing: 4px;
+    line-height: 25px;
+    font-size: 15px;
+    margin-top: 10%;
+}
+
+.forward {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10%;
+}
+
+#forward-datavalue {
+    margin-top: 55px;
+    color: #2a2a2a;
+    cursor: pointer;
+}
+.forward:hover  > #forward-datavalue{
+    color: white;
+}
+.FIcon {
+    margin-top: 40px;
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+.backward {
+    margin-top: 10%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 15px;
+}
+#backward-datavalue {
+    margin-top: 55px;
+    color: #2a2a2a;
+    cursor: pointer;
+}
+.backward:hover  > #backward-datavalue{
+    color: white;
+}
+#backicon {
+    margin-top: 40px;
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
 }

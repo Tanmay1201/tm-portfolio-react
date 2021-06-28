@@ -1,29 +1,20 @@
 import './SocialNet.css'
 import {connect} from 'react-redux'
 import { useEffect, useState } from 'react'
-import axios from 'axios'
-const SocialNet = props => {
+import {SSN_Fetch} from '../../Actions/SSN'
 
-    const [SSN_Data, setSSN_Data] = useState([])
+const SocialNet = props => {
     useEffect(() => {
-        if(props.SSN.length == 0)
-        {
-            axios.get('http://localhost:5000/ssn')
-            .then(res=> {
-                console.log(res)
-                setSSN_Data(res.data)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-        }
-            
-      }, [])
+            props.addData()
+        
+    }, [])
+    
     return (
         <>
+            <div className="wrapper">
             <div className="SSN">
                 {
-                SSN_Data && SSN_Data.map((data) => (
+                props.SSN && props.SSN.map((data) => (
                     <div style={{backgroundColor:data.SSN_Background_Color}} className="Generic">
                         <span>{data.SSN_Logo_Name}</span>
                     </div>
@@ -31,6 +22,8 @@ const SocialNet = props => {
                 ))
             }
             </div>
+            </div>
+            
         </>
     )
 }
@@ -41,4 +34,11 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(SocialNet)
+const mapDispatchToProps = dispatch => {
+    return {
+        addData: () => dispatch(SSN_Fetch())
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SocialNet)

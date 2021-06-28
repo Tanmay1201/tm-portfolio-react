@@ -5,22 +5,26 @@ import axios from 'axios'
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-import {SSN_FORM_OPEN} from '../../Actions/SSN'
+import {Handle_Form, SSN_Fetch} from '../../Actions/SSN'
+
 import SSN_Form from '../SocialNetworkSidenav/SSN_Form'
 
 const Profile_SSN = (props) => {
-    const [SSN_Data, setSSN_Data] = useState([])
-    if(SSN_Data.length == 0)
-        {
-            axios.get('http://localhost:5000/ssn')
-            .then(res=> {
-                console.log(res)
-                setSSN_Data(res.data)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-        }
+    useEffect(() => {        
+            props.addData()
+    }, [])
+
+    const handleDelete = (value) => {
+        console.log(value)
+        axios
+        .delete(`http://localhost:5000/ssn/${value}`)
+        .then(res => {
+            props.addData()
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    }
 
     return (
         <>
@@ -44,11 +48,11 @@ const Profile_SSN = (props) => {
                         </div>
                     </th>
                     <th>
-                            <AddCircleOutlineIcon onClick={() => props.openForm(true)}/>
+                            <AddCircleOutlineIcon onClick={() => props.openForm(true, 'A', null)}/>
                         
                     </th>
                     {
-                        SSN_Data && SSN_Data.map((data) => (
+                        props.SSN && props.SSN.map((data, index) => (
                                 <tr>
                                     <td>
                                         <div className="row_url" style={{backgroundColor:data.SSN_Background_Color}}>{data.SSN_URL}</div>
@@ -61,12 +65,12 @@ const Profile_SSN = (props) => {
                                     </td>
                                     <td>
                                         <div className="EIcon">
-                                            <EditIcon />
+                                            <EditIcon onClick={() => props.openForm(true, 'E', index)} />
                                         </div>
                                     </td>
                                     <td>
                                         <div className="DelIcon">
-                                            <DeleteIcon />
+                                            <DeleteIcon onClick={() => handleDelete(data.SSN_Logo_Name)}/>
                                         </div>
                                         
                                     </td>
@@ -88,7 +92,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        openForm: (value) => dispatch(SSN_FORM_OPEN(value))
+        openForm: (value, type, index) => dispatch(Handle_Form(value, type, index)),
+        addData: () => dispatch(SSN_Fetch())
     }
 }
 
