@@ -63,8 +63,11 @@ const Experience = () => {
     }
 
     const handleScroll = (e) => {
-        if (e.target.classList.contains("on-scrollbar") === false) {
-            e.target.classList.add("on-scrollbar");
+        if (e.target.classList !== undefined)
+         {
+             if(e.target.classList.contains("on-scrollbar") === false) {
+                e.target.classList.add("on-scrollbar");
+            }
         }
     }
 

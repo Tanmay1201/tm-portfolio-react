@@ -3,6 +3,55 @@
     background-color: #2a2a2a;
     text-align: center;
     color: white;
+    z-index: -10;
+}
+
+.nav {
+    z-index:1000;
+    position:absolute;
+    background-color:#161616;
+    color:white;
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    animation-name: example;
+  animation-duration: 0.5s;
+  font-size:40px; 
+    line-height:80px 
+    
+}
+
+@keyframes example {
+    0%   {height:0%;width:0%;font-size:0px; 
+        line-height:0px }
+  100% {height:80%;width:80%;font-size:40px; 
+    line-height:80px }
+}
+
+.no-nav {
+    z-index:1000;
+    position:absolute;
+    background-color:#161616;
+    color:white;
+    top: 50%;
+    left: 50%;
+    height: 0%;
+    width: 0%;
+    transform: translate(-50%,-50%);
+  font-size:0px; 
+    line-height:80px ;
+    animation-name: example3;
+  animation-duration: 0.5s;
+}
+
+
+@keyframes example3 {
+    0%   {height:80%;width:80%;font-size:40px; 
+        line-height:80px }
+  100% {height:0%;width:0%;;font-size:0px; 
+    line-height:0px;display: none;}
 }
 
 .TopNav {
@@ -76,11 +125,9 @@ h2 {
 }
 
 .test {
-    max-width: 480px;
-    text-align: left;
-    word-spacing: 4px;
-    line-height: 25px;
-    font-size: 15px;
+    width: 70%;
+    text-align: center;
+    font-size: 12px;
     margin-top: 10%;
 }
 
@@ -107,6 +154,7 @@ h2 {
     color: white;
     padding: 15px;
     cursor: pointer;
+    margin-right: 40px;
 }
 .backward {
     margin-top: 10%;
@@ -114,6 +162,7 @@ h2 {
     padding: 10px;
     justify-content: center;
     border-radius: 15px;
+    left: 0;
 }
 #backward-datavalue {
     margin-top: 55px;
@@ -129,4 +178,8 @@ h2 {
     color: white;
     padding: 15px;
     cursor: pointer;
+    margin-left: 40px;
+    left: 0;
 }
+
+

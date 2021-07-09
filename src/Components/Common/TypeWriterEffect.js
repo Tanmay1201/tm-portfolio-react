@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 const Typewriter = props => {
-    const timerRef = useRef(null);
+    const  timerRef = useRef(null);
     var i = 0;
     var speed = 35;
     useEffect(() => {
+        console.log('Useeffect called')
+        console.log(props.string)
         clearTimeout(timerRef.current);
         document.getElementById("demo").innerHTML = '';
         i=0;
@@ -13,11 +15,15 @@ const Typewriter = props => {
     function typeWriter() {
         if(props.string !== null && document.getElementById("demo") !== null) 
         {
-            if(i === props.string.length)
+            if(props.onCompleted != null)
             {
-                setTimeout(function(){ props.onCompleted(true) }, 3000);
-                
+                if(i === props.string.length)
+                {
+                    setTimeout(function(){ props.onCompleted(true) }, 3000);
+                    
+                }
             }
+            
     
             if (i < props.string.length) {
             
@@ -35,7 +41,7 @@ const Typewriter = props => {
       }
     return (
         <>
-            <p id="demo" style={{fontSize: "20px", lineHeight:"30px", wordSpacing:"10px"}}></p>
+            <p id="demo" style={{fontSize: "20px", lineHeight:"40px", wordSpacing:"5px", fontFamily:"fangsong"}}></p>
         </>
     )
 }
