@@ -1,23 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 const Typewriter = props => {
     const  timerRef = useRef(null);
+    const [tempString, settempString] = useState(props.string)
     var i = 0;
     var speed = 35;
     useEffect(() => {
         console.log('Useeffect called')
         console.log(props.string)
+        console.log(timerRef)
         clearTimeout(timerRef.current);
+        console.log(timerRef)
         document.getElementById("demo").innerHTML = '';
         i=0;
+        settempString(props.string)
         typeWriter();
     }, [props.string])
 
+    console.log(tempString)
     function typeWriter() {
-        if(props.string !== null && document.getElementById("demo") !== null) 
+        if(tempString !== null && document.getElementById("demo") !== null) 
         {
             if(props.onCompleted != null)
             {
-                if(i === props.string.length)
+                if(i === tempString.length)
                 {
                     setTimeout(function(){ props.onCompleted(true) }, 3000);
                     
@@ -25,14 +30,14 @@ const Typewriter = props => {
             }
             
     
-            if (i < props.string.length) {
+            if (i < tempString.length) {
             
-              if(props.string.charAt(i) === '<' && props.string.charAt(i+1) === 'b' && props.string.charAt(i+2) === 'r')
+              if(tempString.charAt(i) === '<' && tempString.charAt(i+1) === 'b' && tempString.charAt(i+2) === 'r')
               {
                   i += 4;
                   document.getElementById("demo").innerHTML += '<br>'
               }
-              document.getElementById("demo").innerHTML += props.string.charAt(i);
+              document.getElementById("demo").innerHTML += tempString.charAt(i);
               i++;
               timerRef.current = setTimeout(typeWriter, speed);
             }

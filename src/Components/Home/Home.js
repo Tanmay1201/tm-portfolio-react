@@ -78,6 +78,7 @@ const Home = (props) => {
         setnavclassname('no-nav')
     }
 
+    
     return (
         <>
         
@@ -118,6 +119,7 @@ const Home = (props) => {
                         
                     {
                         props.match.params.componentName === "home" ? 
+                        
                         <div className="test">
                              <Typewriter string={Designation + Description} />
                              

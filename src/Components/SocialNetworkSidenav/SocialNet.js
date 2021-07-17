@@ -2,7 +2,9 @@ import './SocialNet.css'
 import {connect} from 'react-redux'
 import { useEffect, useState } from 'react'
 import {SSN_Fetch} from '../../Actions/SSN'
-
+import facebookicon from './facebook.png'
+import githubicon from './github.png'
+import linkedinicon from './LinkedIn.png'
 const SocialNet = props => {
     useEffect(() => {
             props.addData()
@@ -13,13 +15,12 @@ const SocialNet = props => {
         <>
             <div className="wrapper">
             <div className="SSN">
-                {
-                props.SSN && props.SSN.map((data) => (
-                    <div style={{backgroundColor:data.SSN_Background_Color}} className="Generic">
-                        <span>{data.SSN_Logo_Name}</span>
-                    </div>
-                        
-                ))
+                {   
+                    <>
+                        <img className='image' src={facebookicon} />
+                        <img className="image" src={githubicon} />
+                        <img className="image" src={linkedinicon} />
+                    </>
             }
             </div>
             </div>

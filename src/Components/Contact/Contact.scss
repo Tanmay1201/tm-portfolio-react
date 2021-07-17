@@ -1,0 +1,59 @@
+.contact {
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    line-height: 40px;
+    word-spacing: 2px;
+    font-family: "cursive";
+}
+
+#headline {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+#contact-name, #contact-email {
+    border: 1px solid #616161;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #2a2a2a;
+    outline: none;
+    color: rgb(168, 165, 165);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+#contact-name:focus {
+    border: 1px solid rgb(168, 165, 165);
+}
+#contact-email:focus {
+    border: 1px solid rgb(168, 165, 165);
+}
+
+#contact-submit {
+    border: 1px solid #616161;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 30px;
+    width: 100px;
+    background-color: #6e6e6e;
+    color: rgb(168, 165, 165);
+    cursor: pointer;
+}
+
+#contact-submit:hover {
+    color: rgb(197, 195, 195);
+}
+
+.inputfields {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.socials {
+    margin-top: 40px;
+    #socialconnects {
+        color: rgb(168, 165, 165);
+        font-size: 20px;
+    }
+}

@@ -11,16 +11,27 @@
     left: 0;
     width: 20px;
     z-index: 10;
-    transition: width 0.5s;
+    border: 1px solid red;
     color: white;
     font-size: 40px;
-    width: 40px;
     padding: 3px;
     font-family: cursive;
     cursor: pointer;
 }
-.Generic:hover {
-    width: 80px;
+
+
+.image {
+    height: 60px;
+    width: 60px;
+    transition: width 0.2s;
+    transition: height 0.2s;
+    left: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+.image:hover {
+    width: 70px;
+    height: 70px;
   }
 .FormSSN {
     background: white;
